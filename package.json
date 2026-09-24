@@ -1,0 +1,45 @@
+{
+  "name": "@profullstack/orgs",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Organizations, teams, members, roles and invitations for Postgres. Bring your own users table and your own auth.",
+  "keywords": [
+    "organizations",
+    "teams",
+    "multi-tenancy",
+    "rbac",
+    "postgres"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/profullstack/orgs.git"
+  },
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "import": "./src/index.js"
+    },
+    "./schema": {
+      "types": "./index.d.ts",
+      "import": "./src/schema.js"
+    }
+  },
+  "files": [
+    "src",
+    "index.d.ts",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "node --test test/*.test.js"
+  },
+  "peerDependencies": {
+    "postgres": "^3.4.0"
+  },
+  "devDependencies": {
+    "postgres": "^3.4.7"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
