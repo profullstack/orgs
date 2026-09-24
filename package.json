@@ -1,6 +1,6 @@
 {
   "name": "@profullstack/orgs",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "type": "module",
   "description": "Organizations, teams, members, roles and invitations for Postgres. Bring your own users table and your own auth.",
   "keywords": [
@@ -23,6 +23,9 @@
     "./schema": {
       "types": "./index.d.ts",
       "import": "./src/schema.js"
+    },
+    "./cli": {
+      "import": "./src/cli.js"
     }
   },
   "files": [
@@ -41,5 +44,8 @@
   },
   "engines": {
     "node": ">=20"
+  },
+  "bin": {
+    "orgs": "./src/cli.js"
   }
 }

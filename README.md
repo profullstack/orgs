@@ -134,3 +134,20 @@ Point them elsewhere with `TEST_DATABASE_URL`.
 ## License
 
 MIT
+
+## CLI
+
+The sysop works from a terminal, so every table here is reachable without a web
+app in front of it.
+
+```bash
+export DATABASE_URL=postgres://...
+npx @profullstack/orgs migrate
+npx @profullstack/orgs create "Acme Inc" --user <uuid>
+npx @profullstack/orgs member add acme-inc <uuid> --role admin
+npx @profullstack/orgs team create acme-inc Design
+npx @profullstack/orgs invite acme-inc bob@example.com --role admin
+```
+
+`orgs help` lists the rest. The invite command prints the token once, because
+only its hash is stored.
