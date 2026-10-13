@@ -7,6 +7,16 @@ identity: `user_id` is a bare uuid with an index and no foreign key, because
 your users table may be named anything, live in another schema, or not be in
 this database at all. Removing a user stays your job.
 
+The `orgs` CLI:
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/profullstack/orgs/master/install.sh | sh
+```
+
+No root needed: it installs under `~/.local` (fetching a private Node if yours is too old). Run it again to update; remove with `sh ~/.local/share/orgs/uninstall.sh`. See [CLI](#cli).
+
+The library:
+
 ```bash
 npm i @profullstack/orgs postgres
 ```
